@@ -218,15 +218,13 @@
         </div>
         <!-- Modal -->
         <div class="container">
+            <p>產生圖片網址</p>
             <div class="row">
-                <p>產生圖片網址</p>
-                <input type="file" class="form-control" id="file" placeholder="請輸入圖片連結" @change="uploadImg(e)">
+                <input type="file" class="form-control" id="file" placeholder="請輸入圖片連結" @input="uploadImg">
+                <input class="mt-3" type="text" v-model="imgPath">
             </div>
         </div>
-
-
     </div>
-
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js'
         integrity='sha512-Xk3wWei2TGrsh9kDSBKUMIjw/86sLUvhtnv9f7fOuIwhhiUTKz8szkWkzHthrM5Bb3Bu9idSzkxOrkzhcneuiw=='
         crossorigin='anonymous'></script>

@@ -7,6 +7,7 @@ Vue.createApp({
                 // imagesUrl: [],
             },
             isAddPproduct: true,
+            imgPath: "",
 
         }
     },
@@ -90,6 +91,7 @@ Vue.createApp({
             axios.post(api, formData)
                 .then((res) => {
                     console.log(res.data.imageUrl);
+                    this.imgPath = res.data.imageUrl
                 })
 
         },
